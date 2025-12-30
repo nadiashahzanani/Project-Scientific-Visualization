@@ -77,7 +77,10 @@ st.markdown("""
 Use the sidebar to navigate between pages:
 
 - **Main Page** – Project overview  
-- **Member Pages** – Individual analysis objectives  
+- **Member Pages** – MemberA (Nadia Shahzanani)
+                   - MemberB
+                   - Memberc
+                   - MemberD
 
 Each member focuses on a **different objective** using scientific visualization techniques.
 """)
