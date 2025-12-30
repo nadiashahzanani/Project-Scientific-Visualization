@@ -13,7 +13,7 @@ trust, motivation, and discovery affect students' impulse buying behavior.
 """)
 
 # 3️⃣ Load dataset
-df = pd.read_excel("data/responses.xlsx")  # Adjust path if necessary
+df = pd.read_excel("tiktok_impulse_data_responses.xlsx")  # Adjust path if necessary
 
 # 4️⃣ Factor scores (if not already in dataset)
 factor_cols = [
