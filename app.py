@@ -1,84 +1,48 @@
 import streamlit as st
 
-# Page configuration
+# ------------------------------------------------------------
+# Page Setup
+# ------------------------------------------------------------
 st.set_page_config(
-    page_title="TikTok Shop Impulse Buying Study",
+    page_title="TikTok Shop Impulse Buying Visualization",
     layout="wide"
 )
 
-# Title
-st.title("📊 Determinants of Students' Impulse Buying Behavior on TikTok Shop")
+# ------------------------------------------------------------
+# Header title
+# ------------------------------------------------------------
+st.header("📱 TikTok Shop — Student Impulse Buying Behavior")
 
-# Project Overview
-st.markdown("""
-### 🎯 Project Overview
-This Streamlit application presents an interactive analysis of **students' impulse buying behavior on TikTok Shop** based on survey data collected from students.
-""")
+# ------------------------------------------------------------
+# Intro paragraph
+# ------------------------------------------------------------
+st.write(
+    """
+    A scientific visualization exploring how **promotions, product presentation, trust, motivation, and social influence**
+ affect students' impulse buying behavior on TikTok Shop. 
+    """
+)
 
-st.markdown("---")
+# ------------------------------------------------------------
+# Dataset information
+# ------------------------------------------------------------
+st.write(
+    """
+    This dashboard uses survey data collected from university students about their shopping experiences on TikTok Shop.
+    The aim is to analyze key factors driving impulse purchases and visualize patterns effectively.
+    """
+)
 
-# Group Problem Statement
-st.subheader("📌 Problem Statement")
-st.write("""
-TikTok Shop has become very popular among students because it combines entertainment, promotions, and instant purchasing in one platform. 
-Many students end up buying products impulsively without planning or careful consideration. 
-However, students are often not fully aware of what factors influence their impulse buying behavior, such as promotions, product presentation, trust, and social influence.
+# ------------------------------------------------------------
+# Navigation / Multi-page setup (Optional)
+# ------------------------------------------------------------
+# If you want this page only, you can skip the multi-page code.
+# If your group uses multi-page Streamlit, you can rename your page:
+# Example for multi-page:
+# page1 = st.Page('member_impulse_factors.py', title='Page 1', icon=":bar_chart:")
+# page2 = st.Page('Objectives2.py', title='Page 2', icon=":insights:")
+# page3 = st.Page('Objectives3.py', title='Page 3', icon=":schedule:")
+# page4 = st.Page('Objectives4.py', title='Page 4', icon=":schedule:")
 
-At the same time, sellers and marketers lack clear visual insights into how these factors affect students’ purchasing decisions. 
-Without proper data analysis and visualization, it is difficult to understand patterns, trends, and relationships within impulse buying behavior. 
-Therefore, there is a need to analyze and visualize survey data to better understand the determinants of students’ impulse buying behavior on TikTok Shop.
-""")
-
-# Group Objectives
-st.subheader("🎯 Project Objectives")
-st.write("""
-1. To identify the key factors that influence students’ impulse buying behavior on TikTok Shop.  
-2. To analyze students’ impulse buying tendencies using survey data collected through an online questionnaire.  
-3. To apply scientific visualization techniques to present impulse buying patterns clearly and effectively.  
-4. To explore relationships between demographic factors (such as age, gender, and income) and impulse buying behavior.
-""")
-
-# Features
-st.subheader("✨ Features")
-st.write("""
-- Interactive filters for demographic information (age, gender, income)
-- Five different scientific visualizations showing the impact of key factors
-- Clear interpretation of impulse buying behavior for better understanding
-- Streamlit-based interactive dashboard for real-time data exploration
-""")
-
-# Tools
-st.subheader("🛠 Tools Used")
-st.write("""
-- Python  
-- Streamlit  
-- Pandas  
-- Plotly (for interactive visualizations)  
-- Matplotlib  
-- Seaborn  
-""")
-
-# Dataset Info
-st.subheader("📂 Dataset")
-st.write("""
-Survey responses were collected from university students using Google Forms.
-""")
-
-# Deployment Info
-st.subheader("🚀 Deployment")
-st.write("""
-The application is deployed using [Streamlit Cloud](https://share.streamlit.io/) and provides an interactive interface for exploring the survey results and visualizations.
-""")
-
-# Sidebar navigation info
-st.markdown("---")
-st.markdown("""
-### 👥 Group Members & Pages
-Use the sidebar to navigate between pages:
-
-- **Main Page** – Project overview  
-- **Member Pages** – Individual analysis objectives  
-
-Each member focuses on a **different objective** using scientific visualization techniques.
-""")
-st.info("📌 Navigate using the sidebar on the left.")
+# pg = st.navigation({"Menu": [page1, page2, page3, page4]}) 
+# pg.run()
