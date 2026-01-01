@@ -6,7 +6,7 @@ import numpy as np
 
 def app():
     st.header(
-        "Member C — Sub-Objective 3: Examine Trust, Enjoyment & Shopping Motivation on TikTok Shop"
+        "Sub-Objective 3: Examine Trust, Enjoyment & Shopping Motivation on TikTok Shop"
     )
 
     # --------------------------------------------------
