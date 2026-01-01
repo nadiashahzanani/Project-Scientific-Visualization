@@ -119,12 +119,37 @@ def app():
     # --------------------------------------------------
     st.subheader("4️⃣ Relationship Between Trust and Motivation")
 
+    # Scatter plot
     fig4 = px.scatter(
         filtered_df,
         x='Trust_Score',
-        y='Motivation_Score'
-        trendline='ols'
+        y='Motivation_Score',
+        labels={
+            'Trust_Score': 'Trust Score',
+            'Motivation_Score': 'Motivation Score'
+        }
     )
+    
+    # ---- ADD MANUAL REGRESSION LINE (NumPy) ----
+    x = filtered_df['Trust_Score']
+    y = filtered_df['Motivation_Score']
+    
+    # Calculate line of best fit
+    m, b = np.polyfit(x, y, 1)
+    
+    # Create line values
+    x_line = np.linspace(x.min(), x.max(), 100)
+    y_line = m * x_line + b
+    
+    # Add line to plot
+    fig4.add_scatter(
+        x=x_line,
+        y=y_line,
+        mode='lines',
+        name='Trend Line',
+        line=dict(width=3)
+    )
+    
     st.plotly_chart(fig4, use_container_width=True)
 
     st.write("""
