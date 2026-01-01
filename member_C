@@ -9,7 +9,7 @@ def app():
     st.header("Member C — Sub-Objective 3: Examine Trust, Enjoyment & Shopping Motivation On TikTok Shop Analysis")
 
     # Load dataset
-    df = pd.read_excel("tiktok_impulse_data_responses.xlsx")
+    df = pd.read_excel("cleaned_tiktok_data.xlsx")
 
     # Define factor groups
     trust_items = [
