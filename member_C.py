@@ -122,8 +122,7 @@ def app():
     fig4 = px.scatter(
         filtered_df,
         x='Trust_Score',
-        y='Motivation_Score',
-        trendline='ols'
+        y='Motivation_Score'
     )
     st.plotly_chart(fig4, use_container_width=True)
 
