@@ -16,9 +16,7 @@ page = st.sidebar.radio("Go to page:", ["Main Page", "Member A", "Member B", "Me
 # Load member pages
 if page == "Main Page":
     st.subheader("Project Overview")
-    st.write("Interactive dashboard exploring students' impulse buying behavior.")
+    st.write("This Streamlit dashboard presents a scientific visualization study on
+    students' impulse buying behavior on TikTok Shop.")
 elif page == "Member C":
-    import member_C
     member_C.app()
-else:
-    st.write(f"{page} page is under construction.")
