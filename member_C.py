@@ -67,7 +67,7 @@ def app():
 
     st.write("""
     **Interpretation:**  
-    The correlation heatmap supports the finding that trust-related factors such as reliability, honesty, and product quality are positively associated with motivation factors such as discounts and gifts. 
+    The correlation heatmap supports the finding that trust-related factors such as reliability, honesty, and product quality are positively associated with motivation factors such as discounts and gifts.
     This indicates that higher trust increases shopping motivation on TikTok Shop.
     """)
 
