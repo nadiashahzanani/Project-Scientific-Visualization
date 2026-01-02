@@ -1,6 +1,7 @@
 import streamlit as st
 import pandas as pd
 import plotly.express as px
+import seaborn as sns
 import matplotlib.pyplot as plt
 import numpy as np
 
@@ -12,7 +13,11 @@ def app():
     # --------------------------------------------------
     # Load dataset
     # --------------------------------------------------
-    df = pd.read_excel("cleaned_tiktok_data.xlsx")
+    # Dataset for general analysis & correlation
+    df_main = pd.read_excel("tiktok_impulse_data_responses.xlsx")
+    
+    # Dataset for advanced plotting / predictive analysis
+    df_cleaned = pd.read_excel("cleaned_tiktok_data.xlsx")
 
     # --------------------------------------------------
     # Define factor groups
