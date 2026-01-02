@@ -13,8 +13,7 @@ def app():
     # --------------------------------------------------
     # Load dataset
     # --------------------------------------------------
-    # Dataset for general analysis & correlation
-    df_main = pd.read_excel("tiktok_impulse_data_responses.xlsx")
+    df_cleaned = pd.read_excel("cleaned_tiktok_data.xlsx")
 
     # --------------------------------------------------
     # Define factor groups
