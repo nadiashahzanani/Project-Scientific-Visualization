@@ -1,7 +1,6 @@
 import streamlit as st
 import pandas as pd
 import plotly.express as px
-import seaborn as sns
 import matplotlib.pyplot as plt
 import numpy as np
 
@@ -53,7 +52,6 @@ def app():
     # 1️⃣ Correlation Heatmap
     # --------------------------------------------------
     st.subheader("1️⃣ Correlation Between Trust & Motivation Items")
-
     corr_items = filtered_df[trust_items + motivation_items].corr()
     fig1 = px.imshow(
         corr_items,
@@ -72,15 +70,9 @@ def app():
     # 2️⃣ Bar Chart – Trust Item Means
     # --------------------------------------------------
     st.subheader("2️⃣ Average Trust Scores by Item")
-
     trust_means = filtered_df[trust_items].mean().reset_index()
     trust_means.columns = ['Trust Item', 'Mean Score']
-
-    fig2 = px.bar(
-        trust_means,
-        x='Trust Item',
-        y='Mean Score'
-    )
+    fig2 = px.bar(trust_means, x='Trust Item', y='Mean Score')
     st.plotly_chart(fig2, use_container_width=True)
 
     st.write("""
@@ -94,12 +86,7 @@ def app():
     # 3️⃣ Box Plot – Trust Distribution 
     # --------------------------------------------------
     st.subheader("3️⃣ Distribution of Trust Responses")
-
-    trust_long = filtered_df[trust_items].melt(
-        var_name='Trust Item',
-        value_name='Response'
-    )
-
+    trust_long = filtered_df[trust_items].melt(var_name='Trust Item', value_name='Response')
     fig_box = px.box(
         trust_long,
         x='Trust Item',
